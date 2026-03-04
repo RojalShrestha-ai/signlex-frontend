@@ -1,0 +1,57 @@
+/* SignLex Frontend - Global Styles */
+/* Author: Pawan Rijal */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  h1 {
+    @apply text-3xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl font-semibold;
+  }
+}
+
+@layer components {
+  /* Reusable card component */
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-6;
+  }
+
+  /* Form input styles */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 
+           focus:ring-2 focus:ring-primary-500 focus:border-transparent 
+           outline-none transition-all duration-200;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-medium
+           hover:bg-primary-700 focus:ring-2 focus:ring-primary-500 
+           focus:ring-offset-2 transition-all duration-200;
+  }
+
+  /* Secondary button */
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-medium
+           hover:bg-gray-200 transition-all duration-200;
+  }
+}
