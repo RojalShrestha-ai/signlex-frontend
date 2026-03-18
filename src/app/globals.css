@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #0064B2;
+  --secondary: #FFD51D;
+  
+  /* Accent colors */
+  --accent: #00A86B;
+  --muted: #6B7280;
+  --destructive: #EF4444;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --info: #3B82F6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    
+    /* Adjust accents for dark mode if needed */
+    --accent: #34D399;
+    --muted: #9CA3AF;
+    --destructive: #F87171;
+    --success: #34D399;
+    --warning: #FBBF24;
+    --info: #60A5FA;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono), 'Courier New', monospace;
+}
+
+@utility capsule{
+  @apply max-w-360 mx-auto px-4 md:px-8;
+}
