@@ -1,0 +1,335 @@
+.achievement-badges {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-badges.loading {
+  background: #f3f4f6;
+  color: #6b7280;
+  text-align: center;
+}
+
+.badges-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.badges-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.badges-stats {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.badges-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.25rem;
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+.badges-filters button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.badges-filters button:hover {
+  color: #374151;
+}
+
+.badges-filters button.active {
+  background: white;
+  color: #4f46e5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.badge-card {
+  background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.badge-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.badge-card.unlocked {
+  background: white;
+  border-color: #10b981;
+}
+
+.badge-card.locked {
+  opacity: 0.6;
+}
+
+.badge-card.common {
+  border-left: 4px solid #9ca3af;
+}
+
+.badge-card.rare {
+  border-left: 4px solid #3b82f6;
+}
+
+.badge-card.epic {
+  border-left: 4px solid #a855f7;
+}
+
+.badge-card.legendary {
+  border-left: 4px solid #f59e0b;
+}
+
+.badge-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e5e7eb;
+}
+
+.badge-card.unlocked .badge-icon {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.badge-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.badge-icon svg {
+  color: #9ca3af;
+}
+
+.badge-card.unlocked .badge-icon svg {
+  color: white;
+}
+
+.badge-info h3 {
+  color: #1f2937;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.badge-description {
+  color: #6b7280;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.badge-unlocked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  color: #10b981;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-progress {
+  margin-top: 1rem;
+}
+
+.progress-bar-mini {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill-mini {
+  height: 100%;
+  background: #4f46e5;
+  transition: width 0.3s;
+}
+
+.progress-text {
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.no-badges {
+  text-align: center;
+  padding: 3rem;
+  color: #9ca3af;
+}
+
+.badge-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.badge-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-badge-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e5e7eb;
+}
+
+.modal-badge-icon.unlocked {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+}
+
+.modal-badge-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal-badge-icon svg {
+  color: #9ca3af;
+}
+
+.modal-badge-icon.unlocked svg {
+  color: white;
+}
+
+.badge-modal h2 {
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.rarity-label {
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.modal-description {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.modal-unlocked-info,
+.modal-locked-info {
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.modal-unlocked-info p {
+  color: #374151;
+  margin: 0.5rem 0;
+}
+
+.xp-reward {
+  color: #4f46e5;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.how-to-unlock {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.modal-progress {
+  margin-top: 1rem;
+}
+
+.progress-bar-large {
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill-large {
+  height: 100%;
+  background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+  transition: width 0.3s;
+}
+
+.close-modal {
+  background: #4f46e5;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.close-modal:hover {
+  background: #4338ca;
+}
+
+@media (max-width: 640px) {
+  .badges-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badge-modal {
+    padding: 2rem 1.5rem;
+  }
+}

@@ -1,0 +1,98 @@
+.streak-display {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8c42 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 4px 16px rgba(255, 107, 107, 0.3);
+}
+
+.streak-display.loading {
+  background: #f3f4f6;
+  color: #6b7280;
+  text-align: center;
+  padding: 2rem;
+}
+
+.streak-main {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.streak-icon {
+  color: #fff;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.streak-info {
+  flex: 1;
+}
+
+.current-streak {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.streak-number {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.streak-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.longest-streak {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.streak-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.streak-day {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.streak-day.active {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.streak-message {
+  text-align: center;
+  font-weight: 500;
+  opacity: 0.95;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 640px) {
+  .streak-display {
+    padding: 1.5rem;
+  }
+
+  .streak-main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .streak-number {
+    font-size: 2.5rem;
+  }
+}

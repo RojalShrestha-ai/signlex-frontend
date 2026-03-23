@@ -1,30 +1,45 @@
 {
   "name": "signlex-frontend",
   "version": "0.1.0",
-  "description": "SignLex Frontend - Next.js with Tailwind CSS",
-  "author": "Pawan Rijal",
   "private": true,
+  "dependencies": {
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "framer-motion": "^10.16.5",
+    "axios": "^1.6.2",
+    "firebase": "^10.7.1",
+    "@mediapipe/hands": "^0.4.1646424915",
+    "@mediapipe/camera_utils": "^0.3.1640029074.5",
+    "@tensorflow/tfjs": "^4.15.0",
+    "recharts": "^2.10.3",
+    "lucide-react": "^0.294.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
-    "next": "^14.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "firebase": "^10.8.0",
-    "react-webcam": "^7.2.0",
-    "@mediapipe/hands": "^0.4.1675469240",
-    "@tensorflow/tfjs": "^4.17.0",
-    "lucide-react": "^0.312.0"
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.1",
-    "postcss": "^8.4.33",
-    "autoprefixer": "^10.4.17",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "^14.1.0"
+    "react-scripts": "5.0.1"
   }
 }
