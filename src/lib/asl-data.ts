@@ -1,0 +1,41 @@
+export const ASL_IMGS: Record<string, string> = {
+  A: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/a.gif',
+  B: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/b.gif',
+  C: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/c.gif',
+  D: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/d.gif',
+  E: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/e.gif',
+  F: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/f.gif',
+  G: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/g.gif',
+  H: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/h.gif',
+  I: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/i.gif',
+  J: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/j.gif',
+  K: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/k.gif',
+  L: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/l.gif',
+  M: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/m.gif',
+  N: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/n.gif',
+  O: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/o.gif',
+  P: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/p.gif',
+  Q: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/q.gif',
+  R: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/r.gif',
+  S: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/s.gif',
+  T: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/t.gif',
+  U: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/u.gif',
+  V: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/v.gif',
+  W: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/w.gif',
+  X: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/x.gif',
+  Y: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/y.gif',
+  Z: 'https://www.lifeprint.com/asl101/fingerspelling/abc-gifs/z.gif',
+}
+
+export const SFX = {
+  correct:      'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3',
+  wrong:        'https://assets.mixkit.co/active_storage/sfx/2955/2955-preview.mp3',
+  applause:     'https://assets.mixkit.co/active_storage/sfx/476/476-preview.mp3',
+  firecrackers: '/firecrackers.mp3',
+  fail:         '/fail.mp3',
+  click:        'https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3',
+  pop:          'https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3',
+  whoosh:       'https://assets.mixkit.co/active_storage/sfx/2573/2573-preview.mp3',
+} as const
+
+export type SfxKey = keyof typeof SFX
